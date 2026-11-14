@@ -2,134 +2,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMARTSKILL HUB</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #172554;
-        }
-
-        header {
-            background: #101c3a;
-            color: white;
-            padding: 22px;
-            text-align: center;
-        }
-
-        nav {
-            background: #1e3a8a;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 17px;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-
-        .services {
-            padding: 45px 20px;
-            text-align: center;
-        }
-
-        .services h2 {
-            margin-bottom: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            margin: 15px auto;
-            max-width: 350px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #00000015;
-        }
-
-        footer {
-            background: #101c3a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMARTSKILL HUB</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
+header{background:#102b50;color:white;padding:25px 8%;text-align:center}
+header h1{font-size:30px}
+header p{margin-top:8px;color:#d5e4ff}
+nav{background:#17477c;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}
+.hero{padding:75px 20px;text-align:center;background:#e2edff}
+.hero h2{font-size:32px;color:#102b50;margin-bottom:15px}
+.hero p{font-size:17px;margin-bottom:25px}
+.btn{background:#f2a900;color:#102b50;padding:13px 25px;border-radius:5px;text-decoration:none;font-weight:bold}
+section{padding:55px 8%;text-align:center}
+section h2{color:#102b50;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:30px 20px;border-radius:10px;box-shadow:0 3px 12px #0001}
+.card h3{color:#17477c;margin-bottom:12px}
+.card p{line-height:1.6;margin-bottom:18px}
+.card a{color:#17477c;font-weight:bold}
+#contact{background:#e2edff}
+input,textarea{width:100%;padding:13px;margin:10px 0;border:1px solid #ccc;border-radius:5px;font-size:15px}
+button{background:#102b50;color:white;border:0;padding:13px 25px;border-radius:5px;cursor:pointer}
+footer{background:#102b50;color:white;text-align:center;padding:22px}
+</style>
 </head>
-
 <body>
 
 <header>
-    <h1>SMARTSKILL HUB</h1>
-    <p>Learn Skills. Build Your Future.</p>
+<h1>SMARTSKILL HUB</h1>
+<p>Learn Skills. Build Your Future.</p>
 </header>
 
 <nav>
-    <a href="#home">Accueil</a>
-    <a href="#services">Formations</a>
-    <a href="#contact">Contact</a>
+<a href="#accueil">Accueil</a>
+<a href="#formations">Formations</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<section class="hero" id="home">
-    <h2>Développe tes compétences !</h2>
-    <p>Apprends de nouvelles compétences et construis ton avenir avec SMARTSKILL HUB.</p>
-    <a href="#services" class="btn">Découvrir</a>
+<div class="hero" id="accueil">
+<h2>Développons nos compétences !</h2>
+<p>Apprenez de nouvelles compétences et construisez votre avenir.</p>
+<a class="btn" href="#formations">Découvrir nos formations</a>
+</div>
+
+<section id="formations">
+<h2>Nos formations</h2>
+<div class="cards">
+
+<div class="card">
+<h3>💻 Informatique</h3>
+<p>Apprenez le développement web, les outils numériques et les compétences informatiques.</p>
+<a href="mailto:smartskillhub@gmail.com?subject=Formation%20Informatique">En savoir plus</a>
+</div>
+
+<div class="card">
+<h3>🌍 Langues</h3>
+<p>Améliorez votre français, votre anglais et votre communication.</p>
+<a href="mailto:smartskillhub@gmail.com?subject=Formation%20Langues">En savoir plus</a>
+</div>
+
+<div class="card">
+<h3>🚀 Entrepreneuriat</h3>
+<p>Découvrez comment créer un projet et développer une activité rentable.</p>
+<a href="mailto:smartskillhub@gmail.com?subject=Formation%20Entrepreneuriat">En savoir plus</a>
+</div>
+
+</div>
 </section>
 
-<section class="services" id="services">
-    <h2>Nos formations</h2>
-
-    <div class="card">
-        <h3>💻 Informatique</h3>
-        <p>Apprends le numérique et les nouvelles technologies.</p>
-    </div>
-
-    <div class="card">
-        <h3>🌍 Langues</h3>
-        <p>Développe tes compétences en français et en anglais.</p>
-    </div>
-
-    <div class="card">
-        <h3>🚀 Entrepreneuriat</h3>
-        <p>Découvre comment développer tes projets.</p>
-    </div>
+<section id="contact">
+<h2>Contactez-nous</h2>
+<p>Vous souhaitez en savoir plus sur nos formations ? Écrivez-nous.</p>
+<form action="mailto:smartskillhub@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="nom" placeholder="Votre nom" required>
+<input type="email" name="email" placeholder="Votre adresse e-mail" required>
+<textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+<button type="submit">Envoyer</button>
+</form>
 </section>
 
-<footer id="contact">
-    <p>© 2026 SMARTSKILL HUB - Tous droits réservés.</p>
+<footer>
+<p>© 2026 SMARTSKILL HUB - Tous droits réservés.</p>
 </footer>
 
 </body>
 </html>
+
