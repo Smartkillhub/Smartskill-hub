@@ -4,135 +4,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMARTSKILL HUB</title>
+<title>SMARTSKILL HUB | Learn. Grow. Succeed.</title>
 
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #17233c;
+  background: #f5f7fb;
+  color: #17243a;
 }
 
 header {
-  background: #102a56;
+  background: #10264b;
   color: white;
-  padding: 25px 15px;
-  text-align: center;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-header h1 {
-  font-size: 28px;
-}
-
-header p {
-  margin-top: 8px;
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #55d6be;
 }
 
 nav {
-  background: #174b91;
-  padding: 15px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
+  font-size: 14px;
+}
+
+nav a:hover { color: #55d6be; }
+
+#language {
+  background: #55d6be;
+  border: none;
+  padding: 9px 13px;
+  border-radius: 6px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .hero {
-  text-align: center;
-  padding: 65px 20px;
-  background: linear-gradient(135deg, #102a56, #2875c7);
+  background: linear-gradient(120deg, #10264b, #176b83);
   color: white;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-.hero h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: auto;
 }
 
-.hero a {
+.btn {
   display: inline-block;
-  margin-top: 22px;
-  padding: 13px 25px;
-  background: #ffbd39;
-  color: #102a56;
+  background: #55d6be;
+  color: #10264b;
   text-decoration: none;
+  padding: 14px 25px;
+  margin-top: 28px;
   border-radius: 7px;
   font-weight: bold;
 }
 
+.btn:hover { background: white; }
+
 section {
-  padding: 40px 20px;
+  padding: 65px 7%;
   text-align: center;
 }
 
-section h2 {
-  margin-bottom: 25px;
-  color: #102a56;
+.section-title {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #10264b;
 }
 
-.container {
+.intro {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  gap: 22px;
+  margin-top: 35px;
 }
 
 .card {
   background: white;
-  padding: 25px;
+  padding: 30px 22px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
 }
 
 .card .emoji {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 15px;
 }
 
 .card h3 {
+  color: #10264b;
   margin-bottom: 12px;
-  color: #174b91;
 }
 
 .card p {
+  color: #64748b;
   line-height: 1.6;
-  margin-bottom: 18px;
 }
 
 .card a {
   display: inline-block;
-  background: #174b91;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
+  margin-top: 18px;
+  color: #087e83;
+  font-weight: bold;
   text-decoration: none;
 }
 
+.details {
+  background: white;
+}
+
+.detail-item {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #f5f7fb;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.detail-item h3 { margin-bottom: 10px; }
+
+.detail-item p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
 .about {
-  background: #e8f0fa;
+  background: #eaf4f7;
+}
+
+.contact {
+  background: #10264b;
+  color: white;
+}
+
+.contact h2 { color: white; }
+
+.contact p {
+  line-height: 1.8;
+  margin-top: 15px;
 }
 
 footer {
-  background: #102a56;
+  background: #09172e;
   color: white;
   text-align: center;
   padding: 22px;
-  line-height: 1.8;
+  font-size: 13px;
+}
+
+@media(max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero { padding: 75px 18px; }
+
+  .hero h1 { font-size: 31px; }
+
+  .hero p { font-size: 16px; }
+
+  .section-title { font-size: 25px; }
 }
 </style>
 </head>
@@ -140,72 +223,193 @@ footer {
 <body>
 
 <header>
-<h1>SMARTSKILL HUB</h1>
-<p>Learn skills. Build your Future.</p>
+  <div class="logo">SMARTSKILL HUB</div>
+
+  <nav>
+    <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="#formations" data-fr="Formations" data-en="Courses">Formations</a>
+    <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+    <button id="language" onclick="changeLanguage()">EN</button>
+  </nav>
 </header>
 
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#formations">Formations</a>
-<a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
-</nav>
+<section class="hero" id="accueil">
+  <h1 data-fr="Développez vos compétences !" data-en="Develop Your Skills!">
+    Développez vos compétences !
+  </h1>
 
-<div class="hero" id="accueil">
-<h2>Développons nos compétences !</h2>
-<p>Apprenez de nouvelles compétences et construisez votre avenir.</p>
-<a href="#formations">Découvrir nos formations</a>
-</div>
+  <p data-fr="Apprenez de nouvelles compétences, construisez votre avenir et saisissez les opportunités du monde numérique."
+     data-en="Learn new skills, build your future and discover opportunities in the digital world.">
+    Apprenez de nouvelles compétences, construisez votre avenir et saisissez les opportunités du monde numérique.
+  </p>
+
+  <a href="#formations" class="btn"
+     data-fr="Découvrir nos formations"
+     data-en="Explore Our Courses">
+    Découvrir nos formations
+  </a>
+</section>
 
 <section id="formations">
-<h2>Nos formations</h2>
+  <h2 class="section-title"
+      data-fr="Nos domaines de formation"
+      data-en="Our Learning Areas">
+    Nos domaines de formation
+  </h2>
 
-<div class="container">
+  <p class="intro"
+     data-fr="Choisissez votre domaine et commencez à développer votre potentiel."
+     data-en="Choose your field and start developing your potential.">
+    Choisissez votre domaine et commencez à développer votre potentiel.
+  </p>
 
-<div class="card">
-<div class="emoji">💻</div>
-<h3>Informatique</h3>
-<p>Apprenez HTML, CSS, programmation et outils numériques.</p>
-<a href="#contact">Découvrir</a>
-</div>
+  <div class="cards">
 
-<div class="card">
-<div class="emoji">🌍</div>
-<h3>Langues</h3>
-<p>Améliorez votre anglais et votre français pour communiquer dans le monde.</p>
-<a href="#contact">Découvrir</a>
-</div>
+    <div class="card">
+      <div class="emoji">💻</div>
+      <h3>Informatique</h3>
+      <p data-fr="Découvrez le développement web, la programmation et les outils numériques."
+         data-en="Discover web development, programming and digital tools.">
+        Découvrez le développement web, la programmation et les outils numériques.
+      </p>
+      <a href="#informatique" data-fr="En savoir plus →" data-en="Learn more →">En savoir plus →</a>
+    </div>
 
-<div class="card">
-<div class="emoji">💼</div>
-<h3>Entrepreneuriat</h3>
-<p>Découvrez comment créer et développer votre propre activité.</p>
-<a href="#contact">Découvrir</a>
-</div>
+    <div class="card">
+      <div class="emoji">🌍</div>
+      <h3 data-fr="Langues" data-en="Languages">Langues</h3>
+      <p data-fr="Apprenez de nouvelles langues et améliorez votre communication."
+         data-en="Learn new languages and improve your communication.">
+        Apprenez de nouvelles langues et améliorez votre communication.
+      </p>
+      <a href="#langues" data-fr="En savoir plus →" data-en="Learn more →">En savoir plus →</a>
+    </div>
 
-<div class="card">
-<div class="emoji">📚</div>
-<h3>Ressources éducatives</h3>
-<p>Découvrez des ressources pour apprendre à votre rythme.</p>
-<a href="#contact">Découvrir</a>
-</div>
+    <div class="card">
+      <div class="emoji">🚀</div>
+      <h3>Entrepreneuriat</h3>
+      <p data-fr="Développez vos idées, apprenez à entreprendre et créez votre projet."
+         data-en="Develop your ideas, learn entrepreneurship and build your project.">
+        Développez vos idées, apprenez à entreprendre et créez votre projet.
+      </p>
+      <a href="#entrepreneuriat" data-fr="En savoir plus →" data-en="Learn more →">En savoir plus →</a>
+    </div>
 
-</div>
+    <div class="card">
+      <div class="emoji">📚</div>
+      <h3 data-fr="Ressources éducatives" data-en="Educational Resources">Ressources éducatives</h3>
+      <p data-fr="Accédez à des ressources pour enrichir vos connaissances."
+         data-en="Access resources to expand your knowledge.">
+        Accédez à des ressources pour enrichir vos connaissances.
+      </p>
+      <a href="#ressources" data-fr="En savoir plus →" data-en="Learn more →">En savoir plus →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="details">
+  <h2 class="section-title"
+      data-fr="Explorez nos formations"
+      data-en="Explore Our Courses">
+    Explorez nos formations
+  </h2>
+
+  <div class="detail-item" id="informatique">
+    <h3>💻 Informatique</h3>
+    <p data-fr="HTML, CSS, JavaScript, bureautique et compétences numériques."
+       data-en="HTML, CSS, JavaScript, office software and digital skills.">
+      HTML, CSS, JavaScript, bureautique et compétences numériques.
+    </p>
+  </div>
+
+  <div class="detail-item" id="langues">
+    <h3>🌍 Langues</h3>
+    <p data-fr="Français, anglais et techniques de communication."
+       data-en="French, English and communication skills.">
+      Français, anglais et techniques de communication.
+    </p>
+  </div>
+
+  <div class="detail-item" id="entrepreneuriat">
+    <h3>🚀 Entrepreneuriat</h3>
+    <p data-fr="Création d'entreprise, marketing, gestion et développement de projets."
+       data-en="Business creation, marketing, management and project development.">
+      Création d'entreprise, marketing, gestion et développement de projets.
+    </p>
+  </div>
+
+  <div class="detail-item" id="ressources">
+    <h3>📚 Ressources éducatives</h3>
+    <p data-fr="Guides, documents et supports pour apprendre et progresser."
+       data-en="Guides, documents and learning materials to help you grow.">
+      Guides, documents et supports pour apprendre et progresser.
+    </p>
+  </div>
 </section>
 
 <section class="about" id="apropos">
-<h2>À propos de SMARTSKILL HUB</h2>
-<p>Notre mission est de rendre l'apprentissage accessible à tous, partout dans le monde.</p>
+  <h2 class="section-title"
+      data-fr="À propos de SMARTSKILL HUB"
+      data-en="About SMARTSKILL HUB">
+    À propos de SMARTSKILL HUB
+  </h2>
+
+  <p class="intro"
+     data-fr="SMARTSKILL HUB est une plateforme éducative conçue pour rendre l'apprentissage accessible, développer les compétences et accompagner chacun vers un avenir meilleur."
+     data-en="SMARTSKILL HUB is an educational platform designed to make learning accessible, develop skills and help everyone build a better future.">
+    SMARTSKILL HUB est une plateforme éducative conçue pour rendre l'apprentissage accessible, développer les compétences et accompagner chacun vers un avenir meilleur.
+  </p>
 </section>
 
-<footer id="contact">
-<h3>SMARTSKILL HUB</h3>
-<p>Apprendre aujourd'hui, réussir demain.</p>
-<p>Contact : smartskillhub@gmail.com</p>
-<p>© 2026 SMARTSKILL HUB - Tous droits réservés.</p>
+<section class="contact" id="contact">
+  <h2 class="section-title"
+      data-fr="Contactez-nous"
+      data-en="Contact Us">
+    Contactez-nous
+  </h2>
+
+  <p data-fr="Vous souhaitez en savoir plus sur nos formations ?"
+     data-en="Would you like to know more about our courses?">
+    Vous souhaitez en savoir plus sur nos formations ?
+  </p>
+
+  <p data-fr="Notre équipe prépare un espace de contact pour vous accompagner."
+     data-en="Our team is preparing a contact space to support you.">
+    Notre équipe prépare un espace de contact pour vous accompagner.
+  </p>
+</section>
+
+<footer>
+  © 2026 SMARTSKILL HUB -
+  <span data-fr="Tous droits réservés."
+        data-en="All rights reserved.">
+    Tous droits réservés.
+  </span>
+  <br>
+  Learn Skills. Build Your Future.
 </footer>
+
+<script>
+let currentLanguage = "fr";
+
+function changeLanguage() {
+  currentLanguage = currentLanguage === "fr" ? "en" : "fr";
+
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll("[data-fr]").forEach(element => {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.getElementById("language").textContent =
+    currentLanguage === "fr" ? "EN" : "FR";
+}
+</script>
 
 </body>
 </html>
+
 
 
