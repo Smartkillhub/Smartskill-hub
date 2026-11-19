@@ -231,25 +231,66 @@ footer {
   font-size: 13px;
 }
 
-@media(max-width: 600px) {
+
+@media (max-width: 600px) {
+
   header {
     justify-content: center;
     text-align: center;
+    padding: 15px;
   }
 
   nav {
     justify-content: center;
     gap: 13px;
+    flex-wrap: wrap;
   }
 
-  .hero { padding: 75px 18px; }
+  .hero {
+    padding: 65px 18px;
+  }
 
-  .hero h1 { font-size: 31px; }
+  .hero h1 {
+    font-size: 29px;
+    line-height: 1.4;
+  }
 
-  .hero p { font-size: 16px; }
+  .hero p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
 
-  .section-title { font-size: 25px; }
+  .section-title {
+    font-size: 25px;
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 12px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .card {
+    padding: 25px 18px;
+    border-radius: 16px;
+  }
+
+  .card .emoji {
+    font-size: 38px;
+  }
+
+  .inscription {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
+
 
 /* Design du formulaire SmartSkill Hub */
 .contact h3 {
