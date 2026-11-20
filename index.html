@@ -801,23 +801,46 @@ footer {
   </h2>
 
   
-<h3>Contactez-nous</h3>
+
+<h3 data-fr="Contactez-nous" data-en="Contact Us">
+  Contactez-nous
+</h3>
 
 <form action="https://formsubmit.co/bent61517@gmail.com" method="POST">
-  <input type="text" name="Nom" placeholder="Votre nom complet" required>
 
-  <input type="email" name="Email" placeholder="Votre adresse e-mail" required>
+  <input type="text" name="Nom"
+    data-fr-placeholder="Votre nom complet"
+    data-en-placeholder="Your full name"
+    placeholder="Votre nom complet" required>
 
-  <input type="tel" name="WhatsApp" placeholder="Votre numéro WhatsApp">
+  <input type="email" name="Email"
+    data-fr-placeholder="Votre adresse e-mail"
+    data-en-placeholder="Your email address"
+    placeholder="Votre adresse e-mail" required>
 
-  <textarea name="Message" placeholder="Votre message..." required></textarea>
+  <input type="tel" name="WhatsApp"
+    data-fr-placeholder="Votre numéro WhatsApp"
+    data-en-placeholder="Your WhatsApp number"
+    placeholder="Votre numéro WhatsApp">
 
-  <input type="hidden" name="_subject" value="Nouveau message - SmartSkill Hub">
+  <textarea name="Message"
+    data-fr-placeholder="Votre message..."
+    data-en-placeholder="Your message..."
+    placeholder="Votre message..." required></textarea>
 
-  <button type="submit">Envoyer mon message</button>
+  <input type="hidden" name="_subject"
+    value="Nouveau message - SmartSkill Hub">
+
+  <button type="submit"
+    data-fr="Envoyer mon message"
+    data-en="Send my message">
+    Envoyer mon message
+  </button>
+
 </form>
 
 </section>
+
 
 
 <section id="temoignages">
