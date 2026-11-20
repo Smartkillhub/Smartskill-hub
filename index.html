@@ -978,6 +978,7 @@ footer {
   Learn Skills. Build Your Future.
 </footer>
 
+
 <script>
 let currentLanguage = "fr";
 
@@ -990,10 +991,15 @@ function changeLanguage() {
     element.textContent = element.getAttribute("data-" + currentLanguage);
   });
 
+  document.querySelectorAll("[data-fr-placeholder]").forEach(element => {
+    element.placeholder = element.getAttribute("data-" + currentLanguage + "-placeholder");
+  });
+
   document.getElementById("language").textContent =
     currentLanguage === "fr" ? "EN" : "FR";
 }
 </script>
+
 
 <footer class="footer">
   <h2>SMARTSKILL HUB</h2>
